@@ -1,0 +1,9 @@
+* {
+  margin: 0 auto;
+  width: max-content;
+}
+.intro {
+  border: 1px solid;
+}
+.intro h2 {
+}
