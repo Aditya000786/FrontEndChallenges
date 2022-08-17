@@ -58,10 +58,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
+### Hurdles
+
+1. How to make dynamic text centered?
+
 ### What I learned
 
 1. Centering things using margin trick: https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin-0-auto
-2.
+2. Set width of a span based on width of another element with pure css: https://stackoverflow.com/a/38150661/9802938 https://codepen.io/raiaditya000786/pen/vYRvLMv
+3. Specify width in ch units: https://stackoverflow.com/a/16586438/9802938
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
