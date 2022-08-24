@@ -1,6 +1,6 @@
 * {
-  margin: 0 auto;
   font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 body {
   margin: 2em;
@@ -9,53 +9,94 @@ p {
   opacity: 0.5;
 }
 .intro {
-  /* border: 1px solid; */
+  margin: 50px auto;
   font-size: 15px;
-}
-.intro :not(p) {
-  width: max-content;
-}
-.intro p {
-  max-width: 60ch;
-  /* max-width: 34%; */
+  max-width: 500px;
   text-align: center;
 }
-.card-holder {
-  min-height: 24em;
-  width: 51em;
-  /* outline: 2px solid palevioletred; */
-  position: relative;
+.intro h1{
+  font-weight: 200;
 }
+.intro h3{
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.intro p {
+  color: hsl(229, 6%, 66%);
+}
+.card-holder {
+  display: flex;
+  max-width: 1420px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* position: relative; */
+}
+
 .card {
-  /* padding: 1em; */
+  background-color: #fff;
+  padding: 30px;
+  width: 350px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  /* max-width: 16em; */
+  /* margin: 1e/m auto; */
   /* border: 2px solid; */
-  height: 10em;
-  max-width: 16em;
-  margin: 1em auto;
+}
+@media (max-width:775px) {    
+  .card.push{
+    transform: translateY(0) !important;
+  }
+}
+.card.push{
+  transform: translateY(50%);
+}
+
+.card::after{
+  top:0;
+  left: 0;
   position: absolute;
-  border: 2px solid;
+  content: "";
+  background-color: purple;
+  width: 100%;
+  height: 5px;
+}
+.card h2{
+  margin: 0;
+}
+.card p{
+  font-size: 14px;
+  margin: 15px 0 30px;
+}
+.card img{
+  display: block;
+  margin-left: auto;
+  /* position: absolute;
+  bottom: 2px;
+  right: 2px;
+  margin-right: 1em; */
+}
+.card.top::before{
+  /* width: 100%;
+  content: "";
+  border-top: 5px solid seagreen;
+  position: absolute;
+  top: -6px;
+  border-radius: 68px;
+  left: 0px; */
 }
 .card.top {
-  /* outline: 2px solid seagreen; */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* border-radius: 50px; */
 }
 .card.bottom {
-  /* outline: 2px solid blue; */
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* border-top: 2px solid blue; */
 }
 .card.left {
-  /* outline: 2px solid red; */
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  /* border-top: 2px solid red; */
 }
 .card.right {
-  /* outline: 2px solid purple; */
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  /* border-top: 2px solid purple; */
 }

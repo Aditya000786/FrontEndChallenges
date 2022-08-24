@@ -62,11 +62,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 1. How to make dynamic text centered?
 
+### Questions
+1. How to get intro p in the required width.
+
 ### What I learned
 
 1. Centering things using margin trick: https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin-0-auto
 2. Set width of a span based on width of another element with pure css: https://stackoverflow.com/a/38150661/9802938 https://codepen.io/raiaditya000786/pen/vYRvLMv
 3. Specify width in ch units: https://stackoverflow.com/a/16586438/9802938
+4. Margin left auto used to shift image to right side.
+5. Using transalteY to push 50% down & then using media query to handle mobile view. 
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
