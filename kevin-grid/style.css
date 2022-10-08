@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins";
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100%;
+  background: hsl(257, 40%, 49%) url("images/bg-desktop.svg") no-repeat left top;
+  /* background-color: blue; */
+}
+header {
+  color: #fff;
+}
+main-section {
+  min-height: 380px;
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 90%;
+  vertical-align: middle;
+  margin: auto;
+}
+main-section > img {
+  width: 50%;
+  min-width: 600px;
+}
+img + header {
+  margin: auto;
+  width: 40%;
+}
+
+header p {
+  margin-top: 50px;
+}
+
+header a {
+  text-decoration: none;
+  background-color: white;
+  color: hsl(300, 69%, 71%);
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 50px;
+  width: 130px;
+  margin-top: 10px;
+}
