@@ -4,12 +4,14 @@ body {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   display: grid;
-  background: url(//unsplash.it/1000/800);
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .section-one {
+  grid-area: empty1;
+  background: url(//unsplash.it/1000/800);
   display: grid;
   * {
     display: block;
@@ -19,6 +21,7 @@ body {
   }
 }
 .section-two {
+  grid-area: content2;
   background-color: #ddd;
   display: grid;
   width: 80%;

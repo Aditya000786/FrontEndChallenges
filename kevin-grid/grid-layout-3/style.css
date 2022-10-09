@@ -3,32 +3,63 @@ body {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   display: grid;
-  background: url(//unsplash.it/1000/800);
+  /* grid-template-columns: [page-start] 2fr 80vh 2fr; */
+  /* grid-template-rows: 1fr 30px 30px 1fr; */
+  grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+  grid-template-rows: [hero-start] 50vh [info-start] 5em [hero-end] 5em [info-end] auto [bottom];
   background-repeat: no-repeat;
-  background-size: cover; }
-
+  background-size: cover;
+}
+.title {
+  color: white;
+  font-size: 3.5rem;
+}
+.title span {
+  font-weight: 300;
+  display: block;
+}
+.small-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 .section-one {
-  display: grid; }
-  .section-one * {
-    display: block;
-    margin: auto;
-    text-align: center;
-    height: 30vh; }
+  background: url(//unsplash.it/1000/800);
+  background-color: #777;
+  background-blend-mode: multiply;
+  background-size: cover;
+  text-align: center;
+  grid-column: page-start / page-end;
+  grid-row: hero-start / hero-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .section-two {
+  z-index: 1;
+  grid-row: info-start / info-end;
+  grid-column: content-start / content-end;
   background-color: #ddd;
-  display: grid;
-  width: 80%;
-  margin: auto;
-  grid-template-columns: repeat(3, 1fr); }
-  .section-two .info {
-    display: grid;
-    padding: 40px 0;
-    grid-template-rows: repeat(3, min-content);
-    text-align: center; }
-    .section-two .info * {
-      margin: 5px 0; }
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  /* width: 80%; */
+  /* margin: auto; */
+  /* grid-template-columns: repeat(3, 1fr); */
+}
 
 .section-three {
-  margin-top: 50px;
-  background-color: pink; }
+  padding: 150px 0;
+  grid-column: page-start / page-end;
+  grid-row: info-end / bottom;
+  /* margin-top: 50px; */
+  background-color: lightblue;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-row: 3 / 5;
+}
+.container {
+  grid-column: content-start / content-end;
+  background-color: pink;
+}
