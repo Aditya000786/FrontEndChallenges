@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,600");
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  display: grid;
+  background: url(//unsplash.it/1000/800);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-one {
+  display: grid;
+  * {
+    display: block;
+    margin: auto;
+    text-align: center;
+    height: 30vh;
+  }
+}
+.section-two {
+  background-color: #ddd;
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  .info {
+    display: grid;
+    padding: 40px 0;
+    grid-template-rows: repeat(3, min-content);
+    * {
+      margin: 5px 0;
+    }
+    text-align: center;
+  }
+}
+.section-three {
+  margin-top: 50px;
+  background-color: pink;
+}

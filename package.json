@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch:scss": "node-sass -w styles/styles.scss styles/style.css"
+    "watch:scss": "node-sass -w kevin-grid/grid-layout-3/style.scss kevin-grid/grid-layout-3/style.css"
   },
   "dependencies": {
     "node-sass": "^7.0.3"
