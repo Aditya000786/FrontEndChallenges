@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #252525;
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: 50px repeat(2, 1fr) 50px;
+  grid-template-areas: "header header header header" "hero-title hero-title hero-title hero-title" ". body sidebar ." "end end end end"; }
+
+header {
+  grid-area: header;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  border: 1px solid green; }
+
+.hero {
+  text-align: center;
+  grid-area: hero-title; }
+
+main {
+  grid-area: body; }
+  main .card {
+    display: grid;
+    grid-template-areas: "img header" "img content" "img cta"; }
+    main .card img {
+      grid-area: img;
+      margin-top: 5rem; }
+    main .card h2.card-title {
+      grid-area: header; }
+    main .card div.card-content p {
+      grid-area: content; }
+    main .card div.card-content a {
+      grid-area: cta; }
+
+aside {
+  grid-area: sidebar; }
+
+footer {
+  grid-area: end;
+  text-align: center; }
