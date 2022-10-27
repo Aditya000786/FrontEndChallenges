@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./specs//images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Roboto", sans-serif;
+  padding: 0 2rem;
+  margin: auto;
+  min-height: 100vh;
+  max-width: 1000px;
+}
+
+.desc {
+  color: #fff;
+  h1 {
+    font-size: 3em;
+  }
+}
+.form-holder {
+  margin: 4rem 0;
+  .promo {
+    color: #fff;
+    background-color: hsl(248, 32%, 49%);
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px #888888;
+    margin-bottom: 1em;
+    // width: fit-content;
+  }
+  .form {
+    display: grid;
+    box-shadow: 0 5px 5px #888888;
+    border-radius: 8px;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    padding: 2rem;
+    input {
+      height: 3rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      padding-left: 2em;
+      font-family: "Roboto", sans-serif;
+      &:focus-visible {
+        outline: 1px solid rgba(0, 0, 0, 0.61);
+      }
+    }
+    button {
+      border-radius: 8px;
+      padding: 1em;
+      text-transform: uppercase;
+      background-color: hsl(154, 59%, 51%);
+      color: #fff;
+      border-color: white;
+      font-family: "Roboto", sans-serif;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .terms {
+      margin-top: 0.7rem;
+      margin-bottom: 1rem;
+      color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-size: 0.7rem;
+      span {
+        color: red;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-holder {
+    margin: 0;
+  }
+  body {
+    gap: 1rem;
+    background-image: url("./specs//images/bg-intro-mobile.png");
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr, 1fr;
+  }
+}
