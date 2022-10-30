@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch:scss": "node-sass -w signup-form-master/style.scss signup-form-master/style.css"
+    "watch:scss": "node-sass -w base-apparel-coming-soon/style.scss base-apparel-coming-soon/style.css"
   },
   "dependencies": {
     "node-sass": "^7.0.3"

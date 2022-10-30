@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+@media (max-height: 700px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-height: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
+body {
+  height: 100vh;
+  background-image: url("../base-apparel-coming-soon/images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center center;
+  font-family: "Josefin Sans", sans-serif;
+  // background-color: hsl(0, 100%, 98%);
+  //   overflow: hidden;
+  // margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  > .form {
+    flex: 1;
+    flex-basis: 15%;
+    display: flex;
+    // max-width: 800px;
+    margin: 0 clamp(2rem, 5%, 10rem);
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    // align-items: center;
+    img.logo {
+      object-fit: scale-down;
+      align-self: flex-start;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .bottom-section {
+      // border: 1px solid black;
+      align-self: center;
+      margin-top: 2rem;
+      @keyframes comein {
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      height: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      blockquote,
+      strong {
+        animation: comein 0.5s ease forwards;
+        transform: translateX(-100%);
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        font-weight: 500;
+      }
+      strong {
+        font-weight: bold;
+      }
+      blockquote,
+      p {
+        opacity: 0;
+        color: hsl(0, 36%, 70%);
+      }
+      p {
+        padding-top: 1rem;
+        transform: translateX(100%);
+        animation: comein 0.5s ease forwards;
+        font-weight: 400;
+        width: 60%;
+      }
+      .email-input {
+        // width: max(70%, 350px);
+        // width: max(70%, 350px);
+        margin-bottom: 2rem;
+        width: clamp(100px, 60%, 500px);
+        // width: minmax(350px, 70%);
+        margin-top: 3rem;
+        // width: fit-content;
+        position: relative;
+        // border: 1px solid black;
+        input {
+          //   width: 50rem;
+          width: -webkit-fill-available;
+          background-color: transparent;
+          line-height: 3rem;
+          font-family: "Roboto", sans-serif;
+          //   color: rgba(0, 0, 0, 0.12);
+          // padding-left: 59px;
+          //   width: 70%;
+          border-radius: 32px;
+          border-color: rgba(0, 0, 0, 0.12);
+          padding-left: 10%;
+          &::placeholder {
+            color: hsl(0, 36%, 70%);
+          }
+          &:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+            border-width: 2px;
+          }
+        }
+
+        .logo {
+          cursor: pointer;
+          border-radius: 32px;
+          height: 100%;
+          width: 6rem;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+          position: absolute;
+          top: 50%;
+          right: 0rem;
+          transform: translateY(-50%);
+          background: linear-gradient(
+            135deg,
+            hsl(0, 80%, 86%),
+            hsl(0, 74%, 74%)
+          );
+          //   background: red;
+          svg {
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+  > .model {
+    flex: 1;
+    height: 100%;
+    // max-width: 800px;
+    .bg-image {
+      height: 100%;
+      background-image: url("../base-apparel-coming-soon/images/hero-desktop.jpg");
+      background-position: center center;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.mobile {
+  display: none;
+}
+@media (max-width: 700px) {
+  .model {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: calc(100% + 49px);
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+}
+// 100% -> 100vh for images

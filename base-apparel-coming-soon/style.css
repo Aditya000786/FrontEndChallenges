@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+@media (max-height: 700px) {
+  html {
+    font-size: 10px; } }
+
+@media (max-height: 400px) {
+  html {
+    font-size: 8px; } }
+
+body {
+  height: 100vh;
+  background-image: url("../base-apparel-coming-soon/images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center center;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: space-between; }
+  body > .form {
+    flex: 1;
+    flex-basis: 15%;
+    display: flex;
+    margin: 0 clamp(2rem, 5%, 10rem);
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+    body > .form img.logo {
+      object-fit: scale-down;
+      align-self: flex-start;
+      margin-top: 3rem;
+      margin-bottom: 4rem; }
+    body > .form .bottom-section {
+      align-self: center;
+      margin-top: 2rem;
+      height: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+
+@keyframes comein {
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+      body > .form .bottom-section blockquote,
+      body > .form .bottom-section strong {
+        animation: comein 0.5s ease forwards;
+        transform: translateX(-100%);
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        font-weight: 500; }
+      body > .form .bottom-section strong {
+        font-weight: bold; }
+      body > .form .bottom-section blockquote,
+      body > .form .bottom-section p {
+        opacity: 0;
+        color: #ce9797; }
+      body > .form .bottom-section p {
+        padding-top: 1rem;
+        transform: translateX(100%);
+        animation: comein 0.5s ease forwards;
+        font-weight: 400;
+        width: 60%; }
+      body > .form .bottom-section .email-input {
+        margin-bottom: 2rem;
+        width: clamp(100px, 60%, 500px);
+        margin-top: 3rem;
+        position: relative; }
+        body > .form .bottom-section .email-input input {
+          width: -webkit-fill-available;
+          background-color: transparent;
+          line-height: 3rem;
+          font-family: "Roboto", sans-serif;
+          border-radius: 32px;
+          border-color: rgba(0, 0, 0, 0.12);
+          padding-left: 10%; }
+          body > .form .bottom-section .email-input input::placeholder {
+            color: #ce9797; }
+          body > .form .bottom-section .email-input input:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px rgba(206, 151, 151, 0.5);
+            border-width: 2px; }
+        body > .form .bottom-section .email-input .logo {
+          cursor: pointer;
+          border-radius: 32px;
+          height: 100%;
+          width: 6rem;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+          position: absolute;
+          top: 50%;
+          right: 0rem;
+          transform: translateY(-50%);
+          background: linear-gradient(135deg, #f8bfbf, #ee8c8c); }
+          body > .form .bottom-section .email-input .logo svg {
+            align-self: center; }
+  body > .model {
+    flex: 1;
+    height: 100%; }
+    body > .model .bg-image {
+      height: 100%;
+      background-image: url("../base-apparel-coming-soon/images/hero-desktop.jpg");
+      background-position: center center; }
+    body > .model img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+.mobile {
+  display: none; }
+
+@media (max-width: 700px) {
+  .model {
+    display: none; }
+  .mobile {
+    display: block;
+    width: calc(100% + 49px);
+    margin-left: -25px;
+    margin-right: -25px; } }
