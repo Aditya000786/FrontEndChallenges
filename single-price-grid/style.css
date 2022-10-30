@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0 1rem;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #e5eff5; }
+
+.container {
+  margin: 2rem auto;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  border-radius: 0.5rem;
+  border-bottom: none; }
+  .container .box {
+    padding: 2rem; }
+    .container .box h2,
+    .container .box h3 {
+      margin-bottom: 2rem; }
+  .container .info {
+    background-color: white;
+    flex-basis: 100%;
+    animation: comein 1.5s ease-out forwards;
+    transform: translateY(-100%);
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+    .container .info h2 {
+      color: #2ab2af; }
+    .container .info h3 {
+      color: #c0df34;
+      margin-bottom: 1rem; }
+    .container .info p {
+      color: #98a6bd; }
+  .container .bottom {
+    color: white; }
+  .container .sub {
+    background-color: #2ab2af;
+    border-bottom-left-radius: 0.5rem;
+    animation: comein 1.5s ease-out forwards;
+    transform: translateX(-100%); }
+    .container .sub strong {
+      font-size: 2rem; }
+    .container .sub div {
+      position: relative;
+      width: fit-content;
+      display: inline-block; }
+      .container .sub div span {
+        position: absolute;
+        top: 0.5rem;
+        right: -5rem;
+        opacity: 0.6; }
+    .container .sub button {
+      cursor: pointer;
+      max-width: 300px;
+      margin-top: 2rem;
+      width: 100%;
+      line-height: 2.5rem;
+      background-color: #c0df34;
+      color: white;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 8px; }
+  .container .faq {
+    background-color: #4dd5d3;
+    border-bottom-right-radius: 0.5rem;
+    animation: comein 1.5s ease-out forwards;
+    transform: translateX(100%); }
+    .container .faq ul {
+      list-style: none; }
+  .container > * {
+    flex: 1;
+    flex-basis: 0; }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; }
+    .container > * {
+      flex: 1;
+      flex-basis: 100%; }
+    .container .sub {
+      border-bottom-left-radius: 0px; }
+    .container .faq {
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem; } }
+
+@keyframes comein {
+  to {
+    opacity: 1;
+    transform: translateX(0); }
+  from {
+    opacity: 0; } }
